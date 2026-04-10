@@ -1,6 +1,6 @@
 # 北京工业大学本科生毕业论文 LaTeX 模板
 
-基于 [Ziyu Zhou 的 BJUT 研究生论文模板](https://www.overleaf.com/latex/templates/bjut-undergraduate-thesis/vwdrdbfddvdd)（CC BY 4.0）修改而成，针对本科生毕业设计（论文）撰写规范进行了适配。
+基于 [Ziyu Zhou 的 BJUT 研究生论文模板](https://www.overleaf.com/latex/templates/bjut-undergraduate-thesis/vwdrdbfddvdd)（CC BY 4.0）修改而成，针对本科生毕业设计（论文）撰写规范进行了修改，并适配了TexLive + XeLateX + VScode/Latex Worshop环境，方便本地修改。
 
 ---
 
@@ -300,12 +300,3 @@ git commit -m "清理gitignore缓存"
 | 交叉引用显示 `??` | `.aux` 文件缺失或过期 | 删除所有 `.aux` 后重新编译两次 |
 | 字体找不到 | 编译器不是 XeLaTeX | 确认使用 XeLaTeX 编译 |
 | `\bichapter` 未定义 | 编译了错误的入口文件 | 确认编译的是 `main.tex` 而非章节文件 |
-
----
-
-## Acknowledgements
-
-This project includes content adapted from:
-- **Author**: Ziyu Zhou
-- **Source**: https://www.overleaf.com/latex/templates/bjut-undergraduate-thesis/vwdrdbfddvdd
-- **License**: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
