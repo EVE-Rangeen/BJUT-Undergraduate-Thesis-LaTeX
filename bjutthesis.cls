@@ -4,10 +4,10 @@
 % base settings for cls file
 \LoadClass[UTF8,scheme=plain,zihao=-4,linespread=0.8,sub3sectiuon]{ctexbook}
 \ctexset{
-  punct = quanjiao,
-  space = true,
-  autoindent = true,
-  today = old,
+    punct = quanjiao,
+    space = true,
+    autoindent = true,
+    today = old,
 }
 
 % k-v settings
@@ -15,9 +15,9 @@
 \RequirePackage{kvsetkeys}
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{
-  family = bjut,
-  prefix = bjut@,
-  setkeys = \kvsetkeys,
+    family = bjut,
+    prefix = bjut@,
+    setkeys = \kvsetkeys,
 }
 
 % font settings
@@ -56,10 +56,10 @@
 \setCJKfamilyfont{zhfs}{FangSong}[Path=./,Extension=.ttf,AutoFakeBold=4.5]
 \setCJKmonofont{FangSong}[Path=./,Extension=.ttf]
 \AtBeginDocument{%
-  \setCJKfamilyfont{fang}{FangSong}[Path=./,Extension=.ttf,AutoFakeBold=4.5]%
-  \setCJKfamilyfont{zhfs}{FangSong}[Path=./,Extension=.ttf,AutoFakeBold=4.5]%
-  \renewcommand{\fangsong}{\CJKfamily{fang}}%
-  \setCJKmonofont{FangSong}[Path=./,Extension=.ttf]%
+    \setCJKfamilyfont{fang}{FangSong}[Path=./,Extension=.ttf,AutoFakeBold=4.5]%
+    \setCJKfamilyfont{zhfs}{FangSong}[Path=./,Extension=.ttf,AutoFakeBold=4.5]%
+    \renewcommand{\fangsong}{\CJKfamily{fang}}%
+    \setCJKmonofont{FangSong}[Path=./,Extension=.ttf]%
 }
 
 \xeCJKsetup{CJKspace=true}
@@ -74,16 +74,16 @@
 %\xeCJKDeclareCharClass{CJK}{`A -> `Z}
 %行距由 \@setfontsize\normalsize{12bp}{18bp}%的18定义
 \renewcommand\normalsize{%
-  \@setfontsize\normalsize{12bp}{18bp}%
-  \abovedisplayskip=5bp \@plus 2bp \@minus 2bp
-  \belowdisplayskip=10bp \@plus 2bp \@minus 2bp
-  \abovedisplayskip=\abovedisplayskip
-  \belowdisplayshortskip=\belowdisplayskip
+    \@setfontsize\normalsize{12bp}{18bp}%
+    \abovedisplayskip=5bp \@plus 2bp \@minus 2bp
+    \belowdisplayskip=10bp \@plus 2bp \@minus 2bp
+    \abovedisplayskip=\abovedisplayskip
+    \belowdisplayshortskip=\belowdisplayskip
 }
 
 \def\bjut@def@fontsize#1#2{
-  \expandafter\newcommand\csname #1 \endcsname[1][1.3]{
-  \fontsize{#2}{##1\dimexpr #2}\selectfont}
+    \expandafter\newcommand\csname #1 \endcsname[1][1.3]{
+        \fontsize{#2}{##1\dimexpr #2}\selectfont}
 }
 
 
@@ -92,17 +92,17 @@
 
 %TODO check
 \geometry{
-  a4paper,
-  hcentering,
-  ignoreall,
-  nomarginpar,
-  headheight = 5.0mm,
-  headsep = 5.5mm,
-  top = 30.0mm,
-  bottom = 25.0mm,
-  left = 25.0mm,
-  right = 25.0mm,
-  footskip = 8.5mm
+    a4paper,
+    hcentering,
+    ignoreall,
+    nomarginpar,
+    headheight = 5.0mm,
+    headsep = 5.5mm,
+    top = 30.0mm,
+    bottom = 25.0mm,
+    left = 25.0mm,
+    right = 25.0mm,
+    footskip = 8.5mm
 }
 
 % page styles
@@ -111,33 +111,33 @@
 \RequirePackage{fancyhdr}
 
 \fancypagestyle{bjut@headings}{
-  \fancyhead{}
-  \fancyhead[C]{\bjut@header@font\bjut@header@text} % 设置居中页眉，显示为固定文本
-  \fancyfoot{}
-  \fancyfoot[C]{\zihao{-5}--\ \thepage\ --} % 设置页脚中间的页码
-  \renewcommand{\headrulewidth}{0.4pt} % 设置页眉下方横线的宽度
-  \renewcommand{\footrulewidth}{\z@} % 设置页脚横线的宽度为 0，即不显示
+    \fancyhead{}
+    \fancyhead[C]{\bjut@header@font\bjut@header@text} % 设置居中页眉，显示为固定文本
+    \fancyfoot{}
+    \fancyfoot[C]{\zihao{-5}--\ \thepage\ --} % 设置页脚中间的页码
+    \renewcommand{\headrulewidth}{0.4pt} % 设置页眉下方横线的宽度
+    \renewcommand{\footrulewidth}{\z@} % 设置页脚横线的宽度为 0，即不显示
 }
 
 
 \renewcommand\frontmatter{
-  \if@openright\cleardoublepage\else\clearpage\fi
-  \@mainmatterfalse
-  \pagenumbering{Roman}
-  \pagestyle{bjut@headings}
+    \if@openright\cleardoublepage\else\clearpage\fi
+    \@mainmatterfalse
+    \pagenumbering{Roman}
+    \pagestyle{bjut@headings}
 }
 
 \renewcommand\mainmatter{
-  \if@openright\cleardoublepage\else\clearpage\fi
-  \@mainmattertrue
-  \pagenumbering{arabic}
-  \pagestyle{bjut@headings}
+    \if@openright\cleardoublepage\else\clearpage\fi
+    \@mainmattertrue
+    \pagenumbering{arabic}
+    \pagestyle{bjut@headings}
 }
 
 \renewcommand\backmatter{
-  \if@openright\cleardoublepage\else\clearpage\fi
-  \@mainmatterfalse
-  \pagestyle{bjut@headings}
+    \if@openright\cleardoublepage\else\clearpage\fi
+    \@mainmatterfalse
+    \pagestyle{bjut@headings}
 }
 
 % number
@@ -162,13 +162,13 @@
 \RequirePackage{hyperref}
 \RequirePackage{cleveref}
 \hypersetup{
-  bookmarksnumbered  = true,
-  bookmarksopen      = true,
-  bookmarksopenlevel = 1,
-  breaklinks         = true,
-  colorlinks         = false,
-  plainpages         = false,
-  pdfborder          = 0 0 0
+    bookmarksnumbered  = true,
+    bookmarksopen      = true,
+    bookmarksopenlevel = 1,
+    breaklinks         = true,
+    colorlinks         = false,
+    plainpages         = false,
+    pdfborder          = 0 0 0
 }
 \urlstyle{same}
 
@@ -184,7 +184,7 @@
 \RequirePackage{tabularx}
 \setlength\belowdisplayskip{.5ex}
 \NewDocumentEnvironment{where}{O{式中：}}{
-    #1\tabularx{\textwidth-\widthof{#1}}[t]{@{}r@{~——~}X@{}}%
+#1\tabularx{\textwidth-\widthof{#1}}[t]{@{}r@{~——~}X@{}}%
 }{\endtabularx\\[.5ex]}
 
 % table
@@ -253,38 +253,38 @@
 \RequirePackage{tabularx}
 
 \newcommand{\makecover}{
-  \begin{titlepage}
-  \newgeometry{left=10mm,right=10mm,top=50mm}
-    \begin{center}
-      \includegraphics[width=10.8cm]{headbjut.png}
-      \vskip 1.6cm
-      \contour[20]{white}{
-        \makebox[14.6cm][s]{\fontsize{70}{0}\lishu\bfseries 毕业论文}
-      }
-    \end{center}
-    \vskip 3cm
-  \begin{center}\LARGE\heiti
-  \renewcommand\arraystretch{1.6}
-  \vspace{0mm}
-  \hspace*{10mm} % Adjust the value here to move the table more to the right
-  \begin{minipage}{145mm} % Increase the total width as needed
-    \begin{tabularx}{\textwidth}{@{}r@{}X@{}}
-  \makebox[30mm][s]{题目}      & \underline{\makebox[115mm][c]{XXXXXXXXXX}} \\[22pt]
-  \makebox[30mm][s]{}          & \underline{\makebox[115mm][c]{XXXXXXXXXX}} \\[22pt]
-  \makebox[30mm][s]{姓名}      & \underline{\makebox[115mm][c]{XXX}} \\[22pt]
-  \makebox[30mm][s]{学号}      & \underline{\makebox[115mm][c]{XXXXX}} \\[22pt]
-  \makebox[30mm][s]{指导教师}  & \underline{\makebox[115mm][c]{XXX}} \\[22pt]
-  \makebox[30mm][s]{日期}      & \underline{\makebox[115mm][c]{2024年6月1日}} \\[22pt]
-\end{tabularx}
+    \begin{titlepage}
+        \newgeometry{left=10mm,right=10mm,top=50mm}
+        \begin{center}
+            \includegraphics[width=10.8cm]{headbjut.png}
+            \vskip 1.6cm
+            \contour[20]{white}{
+                \makebox[14.6cm][s]{\fontsize{70}{0}\lishu\bfseries 毕业论文}
+            }
+        \end{center}
+        \vskip 3cm
+        \begin{center}\LARGE\heiti
+            \renewcommand\arraystretch{1.6}
+            \vspace{0mm}
+            \hspace*{10mm} % Adjust the value here to move the table more to the right
+            \begin{minipage}{145mm} % Increase the total width as needed
+                \begin{tabularx}{\textwidth}{@{}r@{}X@{}}
+                    \makebox[30mm][s]{题目}   & \underline{\makebox[115mm][c]{XXXXXXXXXX}} \\[22pt]
+                    \makebox[30mm][s]{}     & \underline{\makebox[115mm][c]{XXXXXXXXXX}} \\[22pt]
+                    \makebox[30mm][s]{姓名}   & \underline{\makebox[115mm][c]{XXX}}        \\[22pt]
+                    \makebox[30mm][s]{学号}   & \underline{\makebox[115mm][c]{XXXXX}}      \\[22pt]
+                    \makebox[30mm][s]{指导教师} & \underline{\makebox[115mm][c]{XXX}}        \\[22pt]
+                    \makebox[30mm][s]{日期}   & \underline{\makebox[115mm][c]{2024年6月1日}}  \\[22pt]
+                \end{tabularx}
 
-  \end{minipage}
-\end{center}\normalsize
+            \end{minipage}
+        \end{center}\normalsize
 
-  \end{titlepage}
-  \restoregeometry
-  \nopagecolor
-  \global\let\makecover\relax
-  %\let\cleardoublepage\clearpage
+    \end{titlepage}
+    \restoregeometry
+    \nopagecolor
+    \global\let\makecover\relax
+    %\let\cleardoublepage\clearpage
 }
 
 
@@ -299,117 +299,117 @@
 
 
 \newcommand{\makestate}{
-  \begin{titlepage}
-       \mbox{}
-    \vskip .5cm
-    \begin{center}
-    \hspace*{-30mm}
-      \makebox[6.5cm][s]{\zihao{2}\heiti\bfseries 毕业设计（论文）诚信声明书}
-    \end{center}
-    \vskip 0.1cm
-    \linespread{1.08}\selectfont
-    {\justifying
-  \hspace{2\ccwd}本人郑重声明：在毕业设计（论文）工作中严格遵守学校有关规定，恪守学术规范； 所提交的论文是我个人在导师指导下独立研究、撰写的成果，毕业设计（论文）中所引用他人的文字、研究成果，均已在毕业设计（论文）中加以说明；在本人的毕业生设计（论文）中未剽窃、抄袭他人的学术观点、思想和成果，未篡改实验数据。
-  
-  \hspace{2\ccwd}本毕业设计（论文）和资料若有不实之处，本人愿承担一切相关责任。}
+    \begin{titlepage}
+        \mbox{}
+        \vskip .5cm
+        \begin{center}
+            \hspace*{-30mm}
+            \makebox[6.5cm][s]{\zihao{2}\heiti\bfseries 毕业设计（论文）诚信声明书}
+        \end{center}
+        \vskip 0.1cm
+        \linespread{1.08}\selectfont
+        {\justifying
+            \hspace{2\ccwd}本人郑重声明：在毕业设计（论文）工作中严格遵守学校有关规定，恪守学术规范； 所提交的论文是我个人在导师指导下独立研究、撰写的成果，毕业设计（论文）中所引用他人的文字、研究成果，均已在毕业设计（论文）中加以说明；在本人的毕业生设计（论文）中未剽窃、抄袭他人的学术观点、思想和成果，未篡改实验数据。
 
-    \begin{center}
-      \renewcommand\arraystretch{1.75}
-      \setlength\tabcolsep{0pt}
-      \hspace*{58mm}
-      \begin{tabular}{r@{}p{18mm}@{：}p{38mm}@{}l@{}l@{}p{38mm}}
-        & \makebox[18mm][s]{学生签名} & \rule[-2mm]{37mm}{.4pt}
-        & \multicolumn{1}{r@{：}}{日期} & \rule[-2mm]{37mm}{.4pt}
-      \end{tabular}
-    \end{center}
+            \hspace{2\ccwd}本毕业设计（论文）和资料若有不实之处，本人愿承担一切相关责任。}
+
+        \begin{center}
+            \renewcommand\arraystretch{1.75}
+            \setlength\tabcolsep{0pt}
+            \hspace*{58mm}
+            \begin{tabular}{r@{}p{18mm}@{：}p{38mm}@{}l@{}l@{}p{38mm}}
+                 & \makebox[18mm][s]{学生签名}    & \rule[-2mm]{37mm}{.4pt}
+                 & \multicolumn{1}{r@{：}}{日期} & \rule[-2mm]{37mm}{.4pt}
+            \end{tabular}
+        \end{center}
 
 
-    \vfill
-    \begin{center}
-    \hspace*{-20mm}
-      \makebox[6.5cm][s]{\zihao{2}\heiti\bfseries 关于论文使用授权的说明}
-    \end{center}
-    {\justifying
-      \hspace{2\ccwd}本人完全了解北京工业大学有关保留、使用学位论文的规定，即：学校有权保留送交论文的复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容，可以采用影印、缩印或其他复制手段保存论文。\par
-    \vskip 0.1cm
-      \RaggedRight
-      \hspace{2\ccwd}（保密的论文在解密后应遵守此规定）}
-      \vspace{10mm}
-      
+        \vfill
+        \begin{center}
+            \hspace*{-20mm}
+            \makebox[6.5cm][s]{\zihao{2}\heiti\bfseries 关于论文使用授权的说明}
+        \end{center}
+        {\justifying
+        \hspace{2\ccwd}本人完全了解北京工业大学有关保留、使用学位论文的规定，即：学校有权保留送交论文的复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容，可以采用影印、缩印或其他复制手段保存论文。\par
+        \vskip 0.1cm
+        \RaggedRight
+        \hspace{2\ccwd}（保密的论文在解密后应遵守此规定）}
+        \vspace{10mm}
+
         \begin{tabular}{@{}p{8mm}@{：}p{30mm}@{}p{18mm}@{：}p{35mm}@{}p{8mm}@{：}p{40mm}@{}}
-      
-      \makebox[8mm][l]{签名} & \rule[-2mm]{30mm}{.4pt} &
-      \makebox[18mm][r]{导师签名} & \rule[-2mm]{35mm}{.4pt} &
-      \makebox[8mm][r]{日期} & \underline{\makebox[40mm][c]{2024年6月1日}} \\
-    \end{tabular}
-    \vfill
-  \end{titlepage}
-  \global\let\makestate\relax
+
+            \makebox[8mm][l]{签名}    & \rule[-2mm]{30mm}{.4pt}                  &
+            \makebox[18mm][r]{导师签名} & \rule[-2mm]{35mm}{.4pt}                  &
+            \makebox[8mm][r]{日期}    & \underline{\makebox[40mm][c]{2026年6月1日}}   \\
+        \end{tabular}
+        \vfill
+    \end{titlepage}
+    \global\let\makestate\relax
 }
 
 \setcounter{secnumdepth}{4}
-\def\bjut@chapter@font{\zihao{3}\heiti}
-\def\bjut@section@font{\zihao{4}\heiti}
-\def\bjut@subsection@font{\zihao{-4}\heiti}
-\def\bjut@subsubsection@font{\zihao{-4}\kaishu}
-\def\bjut@subsubsubsection@font{\zihao{-4}\kaishu}
+\def\bjut@chapter@font{\zihao{-2}\heiti}
+\def\bjut@section@font{\zihao{-3}\heiti}
+\def\bjut@subsection@font{\zihao{4}\heiti}
+\def\bjut@subsubsection@font{\zihao{-4}\heiti}
+\def\bjut@subsubsubsection@font{\zihao{-4}\heiti}
 \let\subsubsubsection\paragraph
 \setlength{\parskip}{\z@}
 
 \ctexset {
-  chapter = {
-    beforeskip   = \z@,
-    afterskip    = 5mm,
-    fixskip      = false,
-    indent       = \z@,
-    format       = \bjut@chapter@font\centering,
-    name         = {,.},
-    nameformat   = {},
-    titleformat  = {},
-    numberformat = {},
-    number       = \arabic{chapter},
-    aftername    = \hspace{\ccwd},
-    afterindent  = true,
-    aftertitle   = {},
-    pagestyle    = bjut@headings
-  },
-  section = {
-    beforeskip   = \z@,
-    afterskip    = \z@,
-    indent       = \z@,
-    format       = \bjut@section@font\raggedright,
-    aftername    = \hspace{\ccwd},
-    afterindent  = true
-  },
-  subsection = {
-    beforeskip   = \z@,
-    afterskip    = \z@,
-    indent       = \z@,
-    format       = \bjut@subsection@font\raggedright,
-    aftername    = \hspace{\ccwd},
-    afterindent  = true
-  },
-  subsubsection = {
-    beforeskip   = \z@,
-    afterskip    = \z@,
-    indent       = \z@,
-    format       = \bjut@subsubsection@font,
-    runin        = true,
-    aftertitle   = \hspace{\ccwd}
-  },
-  paragraph = {
-    beforeskip   = \z@,
-    afterskip    = \z@,
-    indent       = 2\ccwd,
-    format       = \bjut@subsubsubsection@font,
-    runin        = true,
-    aftername    = {},
-    aftertitle   = \hspace{\ccwd}
-  },
+    chapter = {
+      beforeskip   = \z@,
+      afterskip    = 36bp,
+      fixskip      = false,
+      indent       = \z@,
+      format       = \bjut@chapter@font\centering,
+      name         = {,.},
+      nameformat   = {},
+      titleformat  = {},
+      numberformat = {},
+      number       = \arabic{chapter},
+      aftername    = \hspace{\ccwd},
+      afterindent  = true,
+      aftertitle   = {},
+      pagestyle    = bjut@headings
+     },
+    section = {
+      beforeskip   = \z@,
+      afterskip    = \z@,
+      indent       = \z@,
+      format       = \bjut@section@font\raggedright,
+      aftername    = \hspace{\ccwd},
+      afterindent  = true
+     },
+    subsection = {
+            beforeskip   = \z@,
+            afterskip    = \z@,
+            indent       = \z@,
+            format       = \bjut@subsection@font\raggedright,
+            aftername    = \hspace{\ccwd},
+            afterindent  = true
+        },
+    subsubsection = {
+            beforeskip   = \z@,
+            afterskip    = \z@,
+            indent       = \z@,
+            format       = \bjut@subsubsection@font,
+            runin        = true,
+            aftertitle   = \hspace{\ccwd}
+        },
+    paragraph = {
+            beforeskip   = \z@,
+            afterskip    = \z@,
+            indent       = 2\ccwd,
+            format       = \bjut@subsubsubsection@font,
+            runin        = true,
+            aftername    = {},
+            aftertitle   = \hspace{\ccwd}
+        },
 }
 
 \AtBeginDocument{
-  \pagestyle{empty}}
+    \pagestyle{empty}}
 
 \RequirePackage{titlesec}
 
