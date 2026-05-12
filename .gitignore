@@ -314,3 +314,6 @@ TSWLatexianTemp*
 # cursor files
 .cursor/
 .gitignore
+
+# VScode files
+.vscode/
