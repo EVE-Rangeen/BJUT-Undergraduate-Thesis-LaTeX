@@ -107,7 +107,7 @@
 
 % page styles
 \def\bjut@header@text{北京工业大学毕业设计（论文）}
-\def\bjut@header@font{\fontsize{16.5bp}{11.5bp}\selectfont\lishu}
+\def\bjut@header@font{\fontsize{16bp}{11.5bp}\selectfont\lishu}
 \RequirePackage{fancyhdr}
 
 \fancypagestyle{bjut@headings}{
@@ -228,7 +228,7 @@
 % bibliography
 \RequirePackage[sort&compress]{gbt7714}
 \bibliographystyle{gbt7714-numerical}
-\renewcommand\bibfont{\zihao{5}}
+\renewcommand\bibfont{\zihao{-4}}
 \addtolength\bibsep{-3.5mm}
 
 
